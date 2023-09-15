@@ -1,0 +1,256 @@
+:root {
+
+    --very-dark-magenta: hsl( 300, 43%, 22% );
+    --soft-pink: hsl( 333, 80%, 67% );
+    --dark-grayish-magenta: hsl( 303, 10%, 53% );
+    --light-grayish-magenta: hsl( 300, 24%, 96% );
+    --white: hsl( 0, 0%, 100% );
+
+    /* Weights: 400, 500, 700 */
+    --ff-league-spartan: 'League Spartan';
+    --font-size: 0.938rem;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+
+	background-color: var( --white );
+    background-image: url( './images/bg-pattern-top-desktop.svg' ),
+                      url( './images/bg-pattern-bottom-desktop.svg' );
+    background-repeat: no-repeat,
+                       no-repeat;
+    background-position: top 0vh left 0vw,
+                         bottom 0vh right 0vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var( --ff-league-spartan );
+    font-size: var( --font-size );
+}
+
+.social-proof-section-wrapper {
+    max-width: 1024px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.social-proof-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading,
+.rating {
+    width: 50%;
+}
+
+.heading {
+    padding-right: 5rem;
+}
+
+.social-proof-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+
+    color: var( --very-dark-magenta );
+}
+
+.social-proof-desc {
+    color: var( --dark-grayish-magenta );
+
+    font-weight: 500;
+    line-height: 1.5rem;
+
+    margin-top: 1.5rem;
+}
+
+.reviews {
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+}
+
+.report-guru {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.best-tech {
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.rate {
+    width: 75%;
+
+    display: flex;
+    align-items: center;
+
+    padding: 1.25rem;
+    margin-block: .5rem;
+
+    background-color: var( --light-grayish-magenta );
+
+    border-radius: .5rem;
+}
+
+.stars {
+    margin-inline: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info {
+    font-weight: 700;
+
+    color: var( --very-dark-magenta );
+}
+
+.social-proof-cards {
+    height: 15rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-block: 2rem;
+}
+
+.card {
+    width: 25.5%;
+
+    padding: 2rem;
+
+    background-color: var( --very-dark-magenta );
+
+    border-radius: .5rem;
+}
+
+.start {
+    margin-top: 0;
+}
+
+.center {
+    margin-top: 2.5rem;
+}
+
+.end {
+    margin-top: 5rem;
+}
+
+.buyer-info {
+    display: flex;
+    align-items: center;
+}
+.buyer-info img {
+    width: 15%;
+    border-radius: 50%;
+
+    margin-right: 1rem;
+}
+
+.buyer-name {
+    line-height: 1.25rem;
+}
+
+.name {
+    font-weight: 700;
+
+    color: var( --white );
+}
+
+.verified {
+    font-weight: 400;
+
+    color: var( --soft-pink );
+}
+
+.buyer-review {
+    color: var( --white );
+
+    line-height: 1.25rem;
+
+    margin-top: 1.25rem;
+}
+
+
+@media only screen and ( max-width: 1200px ) {
+    .heading {
+        padding-right: 2.5rem;
+    }    
+    .rate {
+        padding: 1rem;
+    }    
+    .card {
+        padding: 1.5rem;
+    }
+}
+@media only screen and ( max-width: 780px ) {
+    body {
+        height: auto;
+    }
+    .social-proof-section-wrapper {
+        max-width: none;
+        width: auto;
+        margin: 2rem;
+    }    
+	.social-proof-header {
+        text-align: center;
+        flex-direction: column;
+        align-items: normal;
+    }
+    .heading, .rating {
+        width: auto;
+    }
+    .heading {
+        padding-right: 0;
+    }    
+    .social-proof-desc {
+        margin-bottom: 1.5rem;
+    }
+    .reviews,
+    .report-guru,    
+    .best-tech {
+        display: block;
+    }
+    .rate {
+        width: auto;
+        flex-direction: column;
+    }
+    .stars {
+        margin-block: 1rem;
+    }
+    .social-proof-cards {
+        height: auto;
+        flex-direction: column;
+    }
+    .start,
+    .center,
+    .end{
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    .card {
+        width: auto;
+    }
+}
+@media only screen and ( max-width: 425px ) {
+	/*Small smartphones [325px -> 425px]*/
+}
+
